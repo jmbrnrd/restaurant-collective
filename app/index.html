@@ -2,37 +2,145 @@
 <html lang="">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="">
+    <meta name="description" content="The Restaurant Collective">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>restaurant collective</title>
+    <title>The Restaurant Collective</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
+    <!-- smoosh -->
+    <script src="scripts/webfonts.js"></script>
+    <!-- endsmoosh -->
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    
+
   </head>
   <body>
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Sass</li>
-      </ul>
-    </div>
-    
+
+    <main class="clearfix">
+
+      <section id="intro" class="intro clearfix">
+        <div class="bgd bgd-plate"></div>
+        <div class="section-content">
+
+
+
+          <div class="logo">
+            <img src="images/rc-logo-trans.svg">
+          </div>
+
+          <p class="lead">The Restaurant Collective is an inclusive body formed by leading restaurateurs and industry professionals whose primary goal is to deliver real day-to-day support to its members whilst raising the social profile of the
+            restaurant industry.</p>
+
+          <p class="lead">The Restaurant Collective is a co-operative organisation, 100% owned by its active membership.</p>
+
+          <div class="pos-centre">
+            <a data-scroll class="btn btn-more" href="#more">Find out more</a>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="more" class="more clearfix">
+        <div class="bgd bgd-right bgd-paella"></div>
+        <div class="section-content">
+
+          <h1>What's it all about?</h1>
+
+          <ul>
+
+            <li>
+              <h2>Empowering Restaurants</h2>
+              <p>Using the strength of the collective to negotiate highly competitive booking deals that are equal for all members.</p>
+              <p>Ensuring that every restaurant has up-to-date digital content that is easily and freely accessible to 3rd party organisations.</p>
+            </li>
+
+            <li>
+              <h2>Sharing knowledge</h2>
+              <p>Providing members with free access to expert guides and specialist information authored by its most successful professionals.</p>
+              <p>Mentoring opportunities for up-and-coming restaurant professionals, both front
+                and back-of-house plus sponsored scholarship and ‘job exchange’ opportunities within Europe.</p>
+            </li>
+
+            <li>
+              <h2>Providing support</h2>
+              <p>Creating an online directory of members, with online booking services that are free to both restaurants and diners.</p>
+              <p>Creating local online marketing opportunites via easy access partner tools.</p>
+            </li>
+
+            <li>
+              <h2>Giving information & insights</h2>
+              <p>Offering benchmarking services that members can use to anonymously share their information and gain
+                access to statistical comparisons and industry trends.</p>
+              <p>Centralised and searchable job vacancy listing for the industry.</p>
+            </li>
+
+            <li>
+              <h2>Increasing Social Profile</h2>
+              <p>Helping restaurants to support local community projects and lead social awareness programmes such as healthy eating and food waste redistribution.</p>
+            </li>
+
+            <li>
+              <h2>Building key partnerships</h2>
+              <p>Securing key partnerships with national industry suppliers and services on behalf of the Collective membership.
+                .</p>
+
+            </li>
+          </ul>
+
+        </div>
+      </section>
+
+      <section id="who" class="who clearfix">
+        <div class="bgd bgd-left bgd-list"></div>
+        <div class="section-content">
+
+          <h1>Who's involved already?</h1>
+
+          <p>The Restaurant Collective presents an opportunity for the industry's most successful professionals to
+            'put something back' into the industry.</p>
+          <p>The Restaurant Collective presents an opportunity for the industry's most successful professionals to
+            'put something back' into the industry.</p>
+          <p>The Restaurant Collective presents an opportunity for the industry's most successful professionals to
+            'put something back' into the industry.</p>
+          <p>The Restaurant Collective presents an opportunity for the industry's most successful professionals to
+            'put something back' into the industry.</p>
+          <p>The Restaurant Collective presents an opportunity for the industry's most successful professionals to
+            'put something back' into the industry.</p>
+          <p>The Restaurant Collective presents an opportunity for the industry's most successful professionals to
+            'put something back' into the industry.</p>
+
+        </div>
+      </section>
+
+
+
+
+
+      <section id="signup" class="signup">
+
+        <div class="section-content">
+          <h1>Register your interest</h1>
+
+          <p>If The Restaurant Collective sounds like an interesting idea to you, then leaave your email below
+            and we'll keep you informed about significant developments.
+            .</p>
+        <form id="subscribe">
+          <input type="text" placeholder="Your email address">
+          <input type="submit" value="Add Me">
+        </form>
+        </div>
+      </section>
+      <section id="sponsors" class="sponsors"></section>
+    </main>
+    <footer>
+    </footer>
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -45,11 +153,23 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="../bower_components/scrollreveal/dist/scrollreveal.js"></script>
+    <script src="../bower_components/smooth-scroll/dist/js/smooth-scroll.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-    
+
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+
     <!-- endbuild -->
+
+    <script>
+      // JavaScript
+      window.sr = ScrollReveal();
+      sr.reveal('.logo', { easing: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)', origin: 'top' });
+      sr.reveal('.bgd-right', { distance: '300px', origin: 'right', scale: '1'});
+      sr.reveal('.bgd-left', { distance: '300px', origin: 'left', scale: '1'});
+      smoothScroll.init();
+    </script>
   </body>
 </html>
