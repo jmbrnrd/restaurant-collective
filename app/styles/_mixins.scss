@@ -1,0 +1,67 @@
+// Mixins
+// -------------------------
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
+  box-shadow: $shadow;
+}
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+  &:after {
+    clear: both;
+  }
+}
+@mixin border-box() {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@mixin background-size($width, $height) {
+  -webkit-background-size: $width $height;
+  -moz-background-size:  $width $height;
+  -o-background-size:  $width $height;
+  background-size:  $width $height;
+}
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin triangle($direction, $color, $size) {
+
+  @if $direction == "left" {
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+    border-top: $size solid transparent;
+  }
+  @else if $direction == "right" {
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+    border-top: $size solid transparent;
+  }
+  @else if $direction == "up" {
+    border-bottom: $size solid $color;
+    border-left: $size*.75 solid transparent;
+    border-right: $size*.75 solid transparent;
+  }
+  @else if $direction == "down" {
+    border-right: $size*.75 solid transparent;
+    border-left: $size*.75 solid transparent;
+    border-top: $size solid $color;
+  }
+  height: 0;
+  width: 0;
+}
+@mixin img-placeholder($ratio) {
+
+  @if $ratio == "3:2" {
+    padding-bottom: 66.666%;
+    height: 0;
+  }
+
+}
