@@ -103,7 +103,7 @@ ul, li {
 }
 h1, h2, h3 {
   font-family: $font-family-header;
-  font-weight: 400;
+  font-weight: normal;
 
 }
 h1 {
@@ -115,9 +115,6 @@ h2 {
   text-transform: uppercase;
 }
 a {}
-
-
-
 
 section {
   padding: 0;
@@ -147,7 +144,6 @@ footer {
   img {
     width: 50%;
   }
-
 }
 
 .bgd {
@@ -161,14 +157,19 @@ footer {
   opacity: .3;
 }
 .bgd-right {
-  background-position: right -200px top 0;
+  background-position: right -200px top 100px;
 }
 .bgd-left {
-  background-position: left -50px top 0;
+  background-position: left -50px top 100px;
 }
 .bgd-plate {
   background-image: url(../images/img-plate.png);
   background-size: 200px auto;
+}
+.bgd-cover-kfs {
+  background-image: url(../images/cover-kfs.jpg);
+  background-size: cover;
+  opacity: .3;
 }
 .bgd-paella {
   background-image: url(../images/img-paella.png);
@@ -179,14 +180,8 @@ footer {
   background-size: 250px auto;
 }
 
-.intro {
-
-
-}
-.more {
-
-}
-
+.intro {}
+.more {}
 
 .btn {
   display: inline-block;
@@ -202,8 +197,7 @@ footer {
   background-color: #fff; //default
   transition: all .3s ease-out;
   text-decoration: none;
-  color: #000;
-
+  color: #fff;
   &:hover {
     text-decoration: none;
     color: inherit;
@@ -214,10 +208,10 @@ footer {
   border:  1px solid #fff;
   border-radius: 0;
   margin-top: 1em;
-  color: #000;
+  color: #fff;
   &:hover {
     background-color: rgba(255, 255, 255, 1);
-    color: #000;
+    color: $color-plum;
   }
 }
 .pos-centre {
@@ -380,7 +374,7 @@ ul {
   }
 
   .logo {
-    margin: 90px auto 0;
+    margin: 120px auto 0;
     text-align: center;
     img {
       width: auto;
@@ -390,6 +384,7 @@ ul {
 
   .section-content {
     max-width: 750px;
+    margin-bottom: 220px;
   }
 
   .bgd-plate {
