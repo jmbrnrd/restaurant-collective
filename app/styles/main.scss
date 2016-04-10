@@ -107,7 +107,7 @@ h1, h2, h3 {
 
 }
 h1 {
-  font-size: 35px;
+  font-size: 36px;
   line-height: 1.1;
 }
 h2 {
@@ -218,7 +218,7 @@ footer {
   text-align: center;
 }
 form {}
-input[type="submit"]{
+input[type="button"]{
   box-sizing: border-box;
   display: block;
   float: right;
@@ -243,7 +243,8 @@ input[type="submit"]{
   }
 
 }
-input[type="text"] {
+input[type="text"],
+input[type="email"] {
   box-sizing: border-box;
   display: block;
   margin: 0;
@@ -257,16 +258,20 @@ input[type="text"] {
   opacity: 1;
   float: left;
 }
-input[type="text"]:focus {
+input[type="text"]:focus,
+input[type="email"]:focus {
   outline: none;
 }
-input[type="text"] {
+input[type="text"],
+input[type="email"] {
   padding: 10px;
   border: none;
   transition: all 0.3s;
 }
 input[type="text"]:focus,
-input[type="text"].focus {
+input[type="text"].focus,
+input[type="email"]:focus,
+input[type="email"].focus {
   opacity: 1;
 }
 
@@ -282,15 +287,6 @@ ul {
     padding: 0 21px 0 0;
   }
 }
-
-
-
-
-
-
-
-
-
 
 
 /* Helper classes */
@@ -403,10 +399,11 @@ ul {
       width: 50%;
     }
   }
-  input[type="submit"]{
+  input[type="button"]{
     width: 25%;
   }
-  input[type="text"]{
+  input[type="text"],
+  input[type="email"]{
     width: 75%;
   }
 }
@@ -491,4 +488,3 @@ ul {
     page-break-after: avoid;
   }
 }
-

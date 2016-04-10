@@ -34,8 +34,7 @@
             <img src="images/rc-logo-trans.svg">
           </div>
 
-          <p class="lead">The Restaurant Collective is an inclusive body formed by leading restaurateurs and industry professionals whose primary goal is to deliver real day-to-day support to its members whilst raising the social profile of the
-            restaurant industry.</p>
+          <p class="lead">The Restaurant Collective is an inclusive body formed by leading restaurateurs and industry professionals whose primary goal is to deliver real day-to-day support to its members whilst raising the social profile of the restaurant industry.</p>
 
           <p class="lead">The Restaurant Collective is a co-operative organisation, 100% owned by its active membership.</p>
 
@@ -129,8 +128,8 @@
             and we'll keep you informed about significant developments.
             .</p>
         <form id="subscribe">
-          <input type="text" placeholder="Your email address">
-          <input type="submit" value="Add Me">
+          <input type="email" placeholder="Your email address">
+          <input type="button" value="Add Me">
         </form>
         </div>
       </section>
@@ -162,11 +161,12 @@
 
     <script>
       // JavaScript
+      smoothScroll.init();
       window.sr = ScrollReveal();
       sr.reveal('.logo', { origin: 'bottom', scale: '1', duration: 1000, easing: 'ease-out' });
       sr.reveal('.bgd-right', { distance: '300px', origin: 'right', scale: '1'});
       sr.reveal('.bgd-left', { distance: '300px', origin: 'left', scale: '1'});
-      smoothScroll.init();
+
     </script>
   </body>
 </html>
