@@ -157,17 +157,19 @@ footer {
   opacity: .3;
 }
 .bgd-right {
+  visibility: hidden;
   background-position: right -200px top 100px;
 }
 .bgd-left {
+  visibility: hidden;
   background-position: left -50px top 100px;
 }
 .bgd-plate {
-  background-image: url(../images/img-plate.png);
+  //background-image: url(../images/img-plate.png);
   background-size: 200px auto;
 }
 .bgd-cover-kfs {
-  background-image: url(../images/cover-kfs.jpg);
+  //background-image: url(../images/cover-kfs.jpg);
   background-size: cover;
   opacity: .3;
 }
@@ -290,9 +292,7 @@ ul {
   }
 }
 
-
 /* Helper classes */
-
 /*
  * Hide visually and from screen readers
  */
@@ -363,9 +363,8 @@ ul {
   clear: both;
 }
 
-
+// Larger screens
 @media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
 
   h1 {
     font-size: 48px;
@@ -407,86 +406,5 @@ ul {
   input[type="text"],
   input[type="email"]{
     width: 75%;
-  }
-}
-
-@media print,
-(min-resolution: 1.25dppx),
-(min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
-
-/* Print styles */
-
-@media print {
-  *,
-  *:before,
-  *:after,
-  *:first-letter,
-  *:first-line {
-    background: transparent !important;
-    color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: "";
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  /*
-   * Printing Tables:
-   * http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
-
-  thead {
-    display: table-header-group;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  img {
-    max-width: 100% !important;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
   }
 }

@@ -166,7 +166,7 @@ gulp.task('deploy', function() {
     .pipe($.ghPages());
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'deploy'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
