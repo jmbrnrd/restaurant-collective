@@ -30,6 +30,7 @@ gulp.task('scripts', () => {
     .pipe($.babel())
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest('.tmp/scripts'))
+    .pipe(gulp.dest('dist/scripts'))
     .pipe(reload({stream: true}));
 });
 
@@ -47,6 +48,8 @@ const testLintOptions = {
     mocha: true
   }
 };
+
+
 
 gulp.task('lint', lint('app/scripts/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
@@ -89,6 +92,11 @@ gulp.task('extras', () => {
   ], {
     dot: true
   }).pipe(gulp.dest('dist'));
+});
+
+gulp.task('cname', function(){
+  gulp.src('app/CNAME')
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
@@ -166,7 +174,7 @@ gulp.task('deploy', function() {
     .pipe($.ghPages());
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'cname'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
