@@ -114,7 +114,33 @@ h2 {
   font-size: 21px;
   text-transform: uppercase;
 }
-a {}
+
+a.more {
+
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+
+
+  h2 {
+    text-transform: none;
+    margin: 0;
+    opacity: .7;
+    transition: all .3s ease-out;
+  }
+  img {
+    transition: all .3s ease-out;
+  }
+  &:hover {
+      h2 {
+        opacity: 1;
+      }
+      img {
+        transform: translateY(6px);
+      }
+
+  }
+}
 
 section {
   padding: 0;
@@ -218,6 +244,7 @@ footer {
   }
 }
 .pos-centre {
+  margin: 3em auto 0;
   text-align: center;
 }
 form {}
