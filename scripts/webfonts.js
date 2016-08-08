@@ -1,1 +1,0 @@
-"use strict";!function(){function t(){var t=document.createElement("style");t.rel="stylesheet",document.head.appendChild(t),t.textContent=localStorage.rcFonts}var e="fonts/woff-01.css";try{if(localStorage.rcFonts)t();else{var n=new XMLHttpRequest;n.open("GET",e,!0),n.onload=function(){n.status>=200&&n.status<400&&(localStorage.rcFonts=n.responseText,t())},n.send()}}catch(o){}}();
