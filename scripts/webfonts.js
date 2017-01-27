@@ -21,20 +21,20 @@
             // nothing is local storage
         } else {
 
-                var request = new XMLHttpRequest();
-                request.open('GET', fontPath, true);
+            var request = new XMLHttpRequest();
+            request.open('GET', fontPath, true);
 
-                request.onload = function () {
-                    if (request.status >= 200 && request.status < 400) {
+            request.onload = function () {
+                if (request.status >= 200 && request.status < 400) {
 
-                        // 1st add to localStorage, then load it
-                        localStorage.rcFonts = request.responseText;
-                        addStyle();
-                    }
-                };
+                    // 1st add to localStorage, then load it
+                    localStorage.rcFonts = request.responseText;
+                    addStyle();
+                }
+            };
 
-                request.send();
-            }
+            request.send();
+        }
     } catch (ex) {
         // TODO: Handle FOUC when WOFF files are not supported.
     }
